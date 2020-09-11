@@ -4,34 +4,245 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+
+    <style>
+        article {
+            border: 1px solid rgba(0, 0, 0, 0.25);
+            padding: 10px;
+            box-shadow: 1px 0px 5px 5px grey;
+
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+
+        }
+
+        #container {
+            width: 90vw;
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+        }
+
+        .valgt {
+            color: orange;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+
+        }
+
+        h2 {
+            font-family: 'Roboto', sans-serif;
+
+        }
+
+        p {
+            font-family: 'Roboto', sans-serif;
+
+        }
+
+        .pris {
+            font-style: oblique;
+            color: darkblue;
+
+        }
+
+        .filter {
+            margin: 5px;
+        }
+
+
+        #popup {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, .8);
+            display: none;
+
+        }
+
+        #popup article {
+            width: 80vw;
+            height: 80vh;
+            margin: 4rem auto;
+            background-color: white;
+        }
+
+        #luk {
+            position: fixed;
+            top 0;
+            right: 8em;
+            background-color: white;
+            color: black;
+            border-radius: 5px;
+            padding: .1em;
+            cursor: pointer;
+        }
+
+        .oprindelse {
+            font-style: oblique;
+            color: darkblue;
+        }
+
+        header {
+            width: 100vw;
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(auto-fill, minmax(175px, 10fr));
+
+
+        }
+    </style>
 </head>
+
+
 
 <body>
 
-    <header>
-        <nav>
+    <h1>ALLE</h1>
 
-        </nav>
+    <header>
+
+        <button class="filter" data-køn="europa">Europa</button>
+        <button class="filter" data-køn="nordamerika">Nordamerika</button>
+        <button class="filter" data-køn="asien">Asien</button>
+        <button class="filter" data-køn="sydamerika">Sydamerika</button>
+        <button class="filter" data-køn="afrika">Afrika</button>
+        <button class="filter" data-køn="storbyferie">Storbyferie</button>
+        <button class="filter" data-køn="solferie">Solferie</button>
+        <button class="filter" data-køn="skiferie">Skiferie</button>
+
+
+
     </header>
 
     <section id="popup">
-        <article></article>
+
+        <article>
+
+            <div id="luk">X</div>
+            <h2></h2>
+            <img src="" alt="">
+            <section>
+
+                <h2><span class="navn"></span></h2>
+                <p> <span class="beskrivelse"></span></p>
+                <p><span class="oprindelse"></span></p>
+                <img src="" alt="">
+
+
+            </section>
+
+        </article>
+
     </section>
 
 
-    <section id="alle">
+    <section id="container">
 
     </section>
 
-    <footer>
-
-        <div class="sectionwrapper">
-
-        </div>
-
-    </footer>
+    <template>
 
 
-</body>
+        <article>
+            <h2></h2>
+            <img src="" alt="">
+            <h2 class="navn"></h2>
+            <p class="kort"></p>
+            <p class="pris"></p>
 
-</html>
+
+        </article>
+    </template>
+
+    <script>
+        let filter = "alle";
+        let destinationer;
+        let container = document.querySelector("#container");
+        let temp = document.querySelector("template");
+
+        const link = "https://spreadsheets.google.com/feeds/list/1KumHIMr-aP9Ey9WOiRaoOIaJnTZE0NDR1AoZhw2W5W8/od6/public/values?alt=json"
+
+        document.addEventListener("DOMContentLoaded", hentData);
+
+
+        async function hentData() {
+            const respons = await fetch(link);
+            destinationer = await respons.json();
+            addEventListenersToButtons();
+            vis(destinationer);
+        }
+
+        function vis(destinationer) {
+            //løb igennem array "destinationer"
+            container.innerHTML = "";
+            destinationer.feed.entry.forEach(dest => {
+                if (filter == "alle" || filter == dest.gsx$kategori.$t.toLowerCase()) {
+                    console.log(dest);
+                    const klon = temp.cloneNode(true).content;
+                    klon.querySelector(".navn").textContent = dest.gsx$navn.$t;
+                    klon.querySelector("img").src = "billeder/" + dest.gsx$billede.$t + ".jpg";
+                    klon.querySelector(".kort").textContent = dest.gsx$kort.$t;
+                    klon.querySelector(".pris").textContent = "Pris: " + dest.gsx$pris.$t + ",-";
+
+                    klon.querySelector("article").addEventListener("click", () => visDetaljer(dest));
+
+                    container.appendChild(klon);
+
+                }
+
+            })
+
+        }
+
+        function visDetaljer(dest) {
+            popup.style.display = "block";
+            popup.querySelector(".navn").textContent = dest.gsx$navn.$t;
+            popup.querySelector(".beskrivelse").textContent = dest.gsx$lang.$t;
+            popup.querySelector("img").src = "billeder/" + dest.gsx$billede.$t + ".jpg";
+
+        }
+
+        document.querySelector("#luk").addEventListener("click", () => popup.style.display = "none");
+
+
+        function addEventListenersToButtons() {
+            document.querySelectorAll(".filter").forEach((btn) => {
+                btn.addEventListener("click", filterBTNs);
+            });
+        };
+
+        function filterBTNs() {
+            filter = this.dataset.køn;
+            document.querySelector("h1").textContent = this.textContent;
+            document.querySelectorAll(".filter").forEach((btn) => {
+
+
+                btn.classList.remove("valgt");
+
+            });
+
+            this.classList.add("valgt");
+            vis(destinationer);
+        }
+    </script>
+
+
+</body></html>
