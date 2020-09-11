@@ -14,8 +14,10 @@
         }
 
         img {
-            max-width: 100%;
-            max-height: 100%;
+            width: 100%;
+            /*            max-width: 100%;*/
+            max-height: 200px;
+            object-fit: cover;
 
         }
 
@@ -34,12 +36,15 @@
         }
 
         .valgt {
-            color: orange;
+            color: white;
+            background-color: lightblue;
+
         }
 
         h1 {
             text-align: center;
             font-family: 'Roboto', sans-serif;
+            color: white;
 
         }
 
@@ -79,7 +84,7 @@
             width: 80vw;
             height: 80vh;
             margin: 4rem auto;
-            background-color: white;
+            background-color: #8ECBEB;
         }
 
         #luk {
@@ -98,7 +103,7 @@
             color: darkblue;
         }
 
-        header {
+        .filtre {
             width: 100vw;
             max-width: 1000px;
             margin: 0 auto;
@@ -108,6 +113,19 @@
 
 
         }
+
+        #popup img {
+            max-width: 50%;
+            max-height: 50%;
+        }
+
+<<<<<<< HEAD
+=======
+        body {
+            background-color: #8ECBEB;
+            z-index: 0;
+        }
+>>>>>>> html_branch
     </style>
 </head>
 
@@ -117,7 +135,7 @@
 
     <h1>ALLE</h1>
 
-    <header>
+    <div class="filtre">
 
         <button class="filter" data-køn="europa">Europa</button>
         <button class="filter" data-køn="nordamerika">Nordamerika</button>
@@ -129,8 +147,11 @@
         <button class="filter" data-køn="skiferie">Skiferie</button>
 
 
+<<<<<<< HEAD
 
-    </header>
+=======
+>>>>>>> html_branch
+    </div>
 
     <section id="popup">
 
@@ -242,7 +263,10 @@
             this.classList.add("valgt");
             vis(destinationer);
         }
+
     </script>
 
 
-</body></html>
+</body>
+
+</html>
