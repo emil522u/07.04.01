@@ -10,7 +10,8 @@ font-family: 'Montserrat', sans-serif;
 font-family: 'Roboto Mono', monospace;
 */
 
-h1 {
+h1,
+h2 {
     font-family: 'Roboto Mono', monospace;
 }
 
@@ -161,6 +162,40 @@ footer {
     font-family: 'Roboto Mono', monospace;
 }
 
+/* OM OS */
+/* */
+#omos {
+    margin-top: 10vh;
+    background-color: #57C8EF;
+}
+
+#omos h1 {
+    padding-top: 10px;
+    text-align: center;
+    color: #f0f0f0;
+    border-bottom: 1px solid #1b709f;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+.sectionwrapper-omos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 8vw;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.column2 {
+    margin: 20px;
+}
+
+.column2 img {
+    width: 100%;
+}
+
+
+
 /* MEDIA Q */
 
 /* MOBILE */
@@ -246,5 +281,17 @@ footer {
 
     body {
         overflow-x: hidden;
+    }
+
+    #omos h1 {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
+
+@media screen and (max-width: 535px) {
+    .column2 img {
+        width: 40%;
+        text-align: center;
     }
 }
