@@ -14,8 +14,10 @@
         }
 
         img {
-            max-width: 100%;
-            max-height: 100%;
+            width: 100%;
+            /*            max-width: 100%;*/
+            max-height: 200px;
+            object-fit: cover;
 
         }
 
@@ -34,7 +36,9 @@
         }
 
         .valgt {
-            color: orange;
+            color: white;
+            background-color: lightblue;
+
         }
 
         h1 {
@@ -98,7 +102,7 @@
             color: darkblue;
         }
 
-        header {
+        .filtre {
             width: 100vw;
             max-width: 1000px;
             margin: 0 auto;
@@ -108,6 +112,12 @@
 
 
         }
+
+        #popup img {
+            max-width: 50%;
+            max-height: 50%;
+        }
+
     </style>
 </head>
 
@@ -117,7 +127,7 @@
 
     <h1>ALLE</h1>
 
-    <header>
+    <div class="filtre">
 
         <button class="filter" data-køn="europa">Europa</button>
         <button class="filter" data-køn="nordamerika">Nordamerika</button>
@@ -130,7 +140,7 @@
 
 
 
-    </header>
+    </div>
 
     <section id="popup">
 
@@ -242,7 +252,10 @@
             this.classList.add("valgt");
             vis(destinationer);
         }
+
     </script>
 
 
-</body></html>
+</body>
+
+</html>
