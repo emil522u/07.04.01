@@ -10,7 +10,8 @@ font-family: 'Montserrat', sans-serif;
 font-family: 'Roboto Mono', monospace;
 */
 
-h1 {
+h1,
+h2 {
     font-family: 'Roboto Mono', monospace;
 }
 
@@ -36,11 +37,9 @@ nav {
 }
 
 /* LOGO */
-.logo {
-    color: #c7c7c7;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 20px;
+.logo img {
+    width: 10vw;
+    height: 10vh;
 }
 
 .nav-links {
@@ -68,6 +67,11 @@ nav {
     padding-right: 2em;
 }
 
+.nav-links a:hover {
+    color: #e68609;
+    text-decoration: underline;
+}
+
 /* BURGER MENU */
 .burger {
     display: none;
@@ -82,6 +86,17 @@ nav {
     transition: all 0.3s ease;
 }
 
+/* FOOTER */
+footer {
+    background-color: #1b709f;
+    height: 5vh;
+}
+
+.footer-p {
+    text-align: center;
+    color: #f0f0f0;
+}
+
 /* SPLASH */
 #splash {
     background-image: url(splash/splash1.jpg);
@@ -94,8 +109,7 @@ nav {
 /* FAQ */
 .column {
     text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 30px;
     background-color: #57c8ef;
 }
 
@@ -148,6 +162,40 @@ nav {
     font-family: 'Roboto Mono', monospace;
 }
 
+/* OM OS */
+/* */
+#omos {
+    margin-top: 10vh;
+    background-color: #57C8EF;
+}
+
+#omos h1 {
+    padding-top: 10px;
+    text-align: center;
+    color: #f0f0f0;
+    border-bottom: 1px solid #1b709f;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+.sectionwrapper-omos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 8vw;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.column2 {
+    margin: 20px;
+}
+
+.column2 img {
+    width: 100%;
+}
+
+
+
 /* MEDIA Q */
 
 /* MOBILE */
@@ -180,6 +228,10 @@ nav {
     .burger {
         display: block;
         cursor: pointer;
+    }
+
+    .column {
+        padding: 40px;
     }
 }
 
@@ -229,5 +281,17 @@ nav {
 
     body {
         overflow-x: hidden;
+    }
+
+    #omos h1 {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
+
+@media screen and (max-width: 535px) {
+    .column2 img {
+        width: 40%;
+        text-align: center;
     }
 }
