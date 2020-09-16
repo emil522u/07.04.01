@@ -194,12 +194,7 @@ footer {
     width: 100%;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-/* Destinationer */
-=======
-=======
->>>>>>> origin/master
+
 /* DESTINATION*/
 article img {
     width: 100%;
@@ -207,10 +202,6 @@ article img {
     max-height: 200px;
     object-fit: cover;
 }
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
->>>>>>> origin/master
 
 article {
     border: 1px solid rgba(0, 0, 0, 0.25);
@@ -219,8 +210,6 @@ article {
 
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 .logo img {
     width: 10vw;
     height: 10vh;
@@ -233,10 +222,6 @@ article {
 
 }
 
-=======
->>>>>>> origin/master
-=======
->>>>>>> origin/master
 #container {
     width: 90vw;
     max-width: 1000px;
@@ -246,16 +231,10 @@ article {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 header {
     display: flex;
     justify-content: center;
 }
-=======
->>>>>>> origin/master
-=======
->>>>>>> origin/master
 
 .valgt {
     color: white;
@@ -263,8 +242,6 @@ header {
 
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 h1 {
     text-align: center;
     font-family: 'Roboto', sans-serif;
@@ -284,10 +261,6 @@ p {
 
 }
 
-=======
->>>>>>> origin/master
-=======
->>>>>>> origin/master
 .pris {
     font-style: oblique;
     color: darkblue;
@@ -313,15 +286,12 @@ p {
 #popup article {
     width: 80vw;
     height: 80vh;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     margin: 6rem auto;
-=======
+
     margin: 4rem auto;
->>>>>>> origin/master
-=======
     margin: 4rem auto;
->>>>>>> origin/master
+
     background-color: #8ECBEB;
 }
 
@@ -344,16 +314,10 @@ p {
 .filtre {
     width: 100vw;
     max-width: 1000px;
-<<<<<<< HEAD
-<<<<<<< HEAD
     margin: 3rem auto;
     margin-top: 1rem;
-=======
     margin: 0 auto;
->>>>>>> origin/master
-=======
     margin: 0 auto;
->>>>>>> origin/master
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(auto-fill, minmax(175px, 10fr));
@@ -365,8 +329,6 @@ p {
     max-width: 50%;
     max-height: 50%;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 body {
     background-color: #57c8ef;
@@ -374,10 +336,6 @@ body {
 }
 
 
-=======
->>>>>>> origin/master
-=======
->>>>>>> origin/master
 
 
 /* MEDIA Q */
