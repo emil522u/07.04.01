@@ -10,6 +10,7 @@
     <title>Document</title>
 
     <style>
+        /*
         * {
             margin: 0;
             padding: 0;
@@ -143,6 +144,7 @@
 
         /*  NAVIGATION CSS  */
         /* NAVIGATION*/
+        /*
         nav {
             display: flex;
             justify-content: space-around;
@@ -191,6 +193,7 @@
         }
 
         /* BURGER MENU */
+        /*
         .burger {
             display: none;
         }
@@ -256,6 +259,7 @@
         }
 
         /* Animationer */
+        /*
         @keyframes navLinkFade {
             from {
                 opacity: 0;
@@ -291,12 +295,14 @@
         .logo h1 {
             font-family: 'Roboto Mono', monospace;
         }
+        */
+
     </style>
 
 </head>
 
-<body>
-    <script src="script.js"></script>
+<body class="destination-body">
+    <!--    <script src="script.js"></script>-->
 
     <!--  NAVIGATION  -->
     <header>
@@ -327,45 +333,45 @@
         </nav>
     </header>
 
+    <section class="whole">
+        <h1 class="destination-titel">ALLE</h1>
+        <div class="filtre">
+            <button class="filter" data-køn="europa">Europa</button>
+            <button class="filter" data-køn="nordamerika">Nordamerika</button>
+            <button class="filter" data-køn="asien">Asien</button>
+            <button class="filter" data-køn="sydamerika">Sydamerika</button>
+            <button class="filter" data-køn="afrika">Afrika</button>
+            <button class="filter" data-køn="storbyferie">Storbyferie</button>
+            <button class="filter" data-køn="solferie">Solferie</button>
+            <button class="filter" data-køn="skiferie">Skiferie</button>
+        </div>
 
-    <h1>ALLE</h1>
-    <div class="filtre">
-        <button class="filter" data-køn="europa">Europa</button>
-        <button class="filter" data-køn="nordamerika">Nordamerika</button>
-        <button class="filter" data-køn="asien">Asien</button>
-        <button class="filter" data-køn="sydamerika">Sydamerika</button>
-        <button class="filter" data-køn="afrika">Afrika</button>
-        <button class="filter" data-køn="storbyferie">Storbyferie</button>
-        <button class="filter" data-køn="solferie">Solferie</button>
-        <button class="filter" data-køn="skiferie">Skiferie</button>
-    </div>
-
-    <section id="popup">
-        <article>
-            <div id="luk">X</div>
-            <h2></h2>
-            <img src="" alt="">
-            <section>
-                <h2><span class="navn"></span></h2>
-                <p> <span class="beskrivelse"></span></p>
-                <p><span class="oprindelse"></span></p>
+        <section id="popup">
+            <article>
+                <div id="luk">X</div>
+                <h2></h2>
                 <img src="" alt="">
-            </section>
-        </article>
+                <section>
+                    <h2><span class="navn"></span></h2>
+                    <p> <span class="beskrivelse"></span></p>
+                    <p><span class="oprindelse"></span></p>
+                    <img src="" alt="">
+                </section>
+            </article>
+        </section>
+
+        <section id="container"></section>
+
+        <template class="destination-template">
+            <article id="grid-article">
+                <h2></h2>
+                <img src="" alt="">
+                <h2 class="navn"></h2>
+                <p class="kort"></p>
+                <p class="pris"></p>
+            </article>
+        </template>
     </section>
-
-    <section id="container"></section>
-
-    <template>
-        <article>
-            <h2></h2>
-            <img src="" alt="">
-            <h2 class="navn"></h2>
-            <p class="kort"></p>
-            <p class="pris"></p>
-        </article>
-    </template>
-
     <script>
         let filter = "alle";
         let destinationer;
@@ -436,6 +442,9 @@
             this.classList.add("valgt");
             vis(destinationer);
         }
+
     </script>
 
-</body></html>
+</body>
+
+</html>
