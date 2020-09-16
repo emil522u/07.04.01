@@ -455,7 +455,7 @@ body {
     .column2 img {
         width: 100%;
         text-align: center;
-        padding: 4vw;
+        padding: 0 4vw;
     }
 
     .column2 p {
