@@ -2,7 +2,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM loaded');
     navSlide();
     hentData();
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 });
 
 
@@ -31,14 +34,24 @@ const navSlide = () => {
 
 }
 
+<<<<<<< HEAD
+=======
+
+// FILTER
+
+>>>>>>> origin/master
 let filter = "alle";
 let destinationer;
 let container = document.querySelector("#container");
 let temp = document.querySelector("template");
 
+<<<<<<< HEAD
 const link = "https://spreadsheets.google.com/feeds/list/1KumHIMr-aP9Ey9WOiRaoOIaJnTZE0NDR1AoZhw2W5W8/od6/public/values?alt=json"
 
 
+=======
+const link = "https://spreadsheets.google.com/feeds/list/1KumHIMr-aP9Ey9WOiRaoOIaJnTZE0NDR1AoZhw2W5W8/od6/public/values?alt=json";
+>>>>>>> origin/master
 
 async function hentData() {
     const respons = await fetch(link);
@@ -49,7 +62,11 @@ async function hentData() {
 
 function vis(destinationer) {
     //løb igennem array "destinationer"
+<<<<<<< HEAD
     container.innerHTML = ""
+=======
+    container.innerHTML = "";
+>>>>>>> origin/master
     destinationer.feed.entry.forEach(dest => {
         if (filter == "alle" || filter == dest.gsx$kategori.$t.toLowerCase()) {
             console.log(dest);
@@ -77,9 +94,15 @@ function visDetaljer(dest) {
 
 }
 
+<<<<<<< HEAD
 document.querySelector("#luk").addEventListener("click", () => popup.style.display = "none");
 
 
+=======
+//document.querySelector("#luk").addEventListener("click", () => popup.style.display = "none");
+//
+//
+>>>>>>> origin/master
 function addEventListenersToButtons() {
     document.querySelectorAll(".filter").forEach((btn) => {
         btn.addEventListener("click", filterBTNs);
