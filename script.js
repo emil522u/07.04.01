@@ -3,7 +3,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
     navSlide();
     hentData();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 =======
 >>>>>>> origin/master
 });
@@ -35,6 +38,12 @@ const navSlide = () => {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+// FILTER
+
+>>>>>>> origin/master
 =======
 
 // FILTER
@@ -46,9 +55,13 @@ let container = document.querySelector("#container");
 let temp = document.querySelector("template");
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const link = "https://spreadsheets.google.com/feeds/list/1KumHIMr-aP9Ey9WOiRaoOIaJnTZE0NDR1AoZhw2W5W8/od6/public/values?alt=json"
 
 
+=======
+const link = "https://spreadsheets.google.com/feeds/list/1KumHIMr-aP9Ey9WOiRaoOIaJnTZE0NDR1AoZhw2W5W8/od6/public/values?alt=json";
+>>>>>>> origin/master
 =======
 const link = "https://spreadsheets.google.com/feeds/list/1KumHIMr-aP9Ey9WOiRaoOIaJnTZE0NDR1AoZhw2W5W8/od6/public/values?alt=json";
 >>>>>>> origin/master
@@ -63,7 +76,11 @@ async function hentData() {
 function vis(destinationer) {
     //løb igennem array "destinationer"
 <<<<<<< HEAD
+<<<<<<< HEAD
     container.innerHTML = ""
+=======
+    container.innerHTML = "";
+>>>>>>> origin/master
 =======
     container.innerHTML = "";
 >>>>>>> origin/master
@@ -95,9 +112,15 @@ function visDetaljer(dest) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 document.querySelector("#luk").addEventListener("click", () => popup.style.display = "none");
 
 
+=======
+//document.querySelector("#luk").addEventListener("click", () => popup.style.display = "none");
+//
+//
+>>>>>>> origin/master
 =======
 //document.querySelector("#luk").addEventListener("click", () => popup.style.display = "none");
 //

@@ -195,8 +195,11 @@ footer {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* Destinationer */
 =======
+=======
+>>>>>>> origin/master
 /* DESTINATION*/
 article img {
     width: 100%;
@@ -204,6 +207,9 @@ article img {
     max-height: 200px;
     object-fit: cover;
 }
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 
 article {
@@ -213,6 +219,7 @@ article {
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .logo img {
     width: 10vw;
@@ -228,6 +235,8 @@ article {
 
 =======
 >>>>>>> origin/master
+=======
+>>>>>>> origin/master
 #container {
     width: 90vw;
     max-width: 1000px;
@@ -238,10 +247,13 @@ article {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 header {
     display: flex;
     justify-content: center;
 }
+=======
+>>>>>>> origin/master
 =======
 >>>>>>> origin/master
 
@@ -251,6 +263,7 @@ header {
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 h1 {
     text-align: center;
@@ -271,6 +284,8 @@ p {
 
 }
 
+=======
+>>>>>>> origin/master
 =======
 >>>>>>> origin/master
 .pris {
@@ -299,7 +314,11 @@ p {
     width: 80vw;
     height: 80vh;
 <<<<<<< HEAD
+<<<<<<< HEAD
     margin: 6rem auto;
+=======
+    margin: 4rem auto;
+>>>>>>> origin/master
 =======
     margin: 4rem auto;
 >>>>>>> origin/master
@@ -326,8 +345,12 @@ p {
     width: 100vw;
     max-width: 1000px;
 <<<<<<< HEAD
+<<<<<<< HEAD
     margin: 3rem auto;
     margin-top: 1rem;
+=======
+    margin: 0 auto;
+>>>>>>> origin/master
 =======
     margin: 0 auto;
 >>>>>>> origin/master
@@ -343,6 +366,7 @@ p {
     max-height: 50%;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 body {
     background-color: #57c8ef;
@@ -350,6 +374,8 @@ body {
 }
 
 
+=======
+>>>>>>> origin/master
 =======
 >>>>>>> origin/master
 
