@@ -6,6 +6,12 @@
     <title>Document</title>
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         article {
             border: 1px solid rgba(0, 0, 0, 0.25);
             padding: 10px;
@@ -13,9 +19,13 @@
 
         }
 
-        img {
+        .logo img {
+            width: 10vw;
+            height: 10vh;
+        }
+
+        #container img {
             width: 100%;
-            /*            max-width: 100%;*/
             max-height: 200px;
             object-fit: cover;
 
@@ -45,6 +55,8 @@
             text-align: center;
             font-family: 'Roboto', sans-serif;
             color: white;
+            margin: 6rem auto;
+            margin-bottom: 2rem;
 
         }
 
@@ -83,7 +95,7 @@
         #popup article {
             width: 80vw;
             height: 80vh;
-            margin: 4rem auto;
+            margin: 6rem auto;
             background-color: #8ECBEB;
         }
 
@@ -106,7 +118,8 @@
         .filtre {
             width: 100vw;
             max-width: 1000px;
-            margin: 0 auto;
+            margin: 3rem auto;
+            margin-top: 1rem;
             display: grid;
             grid-gap: 10px;
             grid-template-columns: repeat(auto-fill, minmax(175px, 10fr));
@@ -120,7 +133,7 @@
         }
 
         body {
-            background-color: #8ECBEB;
+            background-color: #57c8ef;
             /*            z-index: 0;*/
         }
 
@@ -274,7 +287,6 @@
         .logo h1 {
             font-family: 'Roboto Mono', monospace;
         }
-
     </style>
 </head>
 
@@ -295,7 +307,11 @@
                     <a href="destinationer.html">Destinationer</a>
                 </li>
                 <li>
+<<<<<<< HEAD
                     <a href="index.html">FAQ</a>
+=======
+                    <a href="index.html/faq">FAQ</a>
+>>>>>>> origin/master
                 </li>
                 <li>
                     <a href="omos2.html">Om Os</a>
@@ -323,6 +339,7 @@
         <button class="filter" data-køn="storbyferie">Storbyferie</button>
         <button class="filter" data-køn="solferie">Solferie</button>
         <button class="filter" data-køn="skiferie">Skiferie</button>
+
     </div>
 
     <section id="popup">
@@ -435,10 +452,7 @@
             this.classList.add("valgt");
             vis(destinationer);
         }
-
     </script>
 
 
-</body>
-
-</html>
+</body></html>
