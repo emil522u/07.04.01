@@ -74,7 +74,7 @@ nav {
     padding-right: 2em;
 }
 
-.nav-links a:hover {
+.nav-links a:active {
     color: #e68609;
     text-decoration: line-through;
 }
@@ -207,7 +207,7 @@ footer {
 }
 
 
-/* DESTINATION*/
+/* DESTINATION */
 article img {
     width: 100%;
     /*            max-width: 100%;*/
@@ -215,11 +215,15 @@ article img {
     object-fit: cover;
 }
 
-article {
+#popup article {
     border: 1px solid rgba(0, 0, 0, 0.25);
     padding: 10px;
     box-shadow: 1px 0px 5px 5px grey;
 
+}
+
+.destination-template article {
+    background-color: white;
 }
 
 .logo img {
@@ -238,14 +242,10 @@ article {
     width: 90vw;
     max-width: 1000px;
     margin: 0 auto;
+    margin-top: 20px;
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-}
-
-header {
-    display: flex;
-    justify-content: center;
 }
 
 .valgt {
@@ -254,23 +254,15 @@ header {
 
 }
 
-h1 {
+.destination-titel {
     text-align: center;
     font-family: 'Roboto', sans-serif;
     color: white;
-    margin: 6rem auto;
-    margin-bottom: 2rem;
-
-}
-
-h2 {
-    font-family: 'Roboto', sans-serif;
-
-}
-
-p {
-    font-family: 'Roboto', sans-serif;
-
+    border-bottom: 1px solid #1b709f;
+    margin-left: 300px;
+    margin-right: 300px;
+    padding-top: 20px;
+    margin-bottom: 20px;
 }
 
 .pris {
@@ -279,10 +271,18 @@ p {
 
 }
 
+/*
 .filter {
     margin: 5px;
+        margin-bottom: 20px;
 }
+*/
 
+#grid-article {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
 
 #popup {
     position: fixed;
@@ -329,12 +329,24 @@ p {
     margin: 3rem auto;
     margin-top: 1rem;
     margin: 0 auto;
-    margin: 0 auto;
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(auto-fill, minmax(175px, 10fr));
+}
 
+.filtre button {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #195b80;
+    font-size: 13px;
+    padding: 5px 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
 
+.filtre button:active {
+    color: #e68609;
+    text-decoration: line-through;
 }
 
 #popup img {
@@ -342,9 +354,13 @@ p {
     max-height: 50%;
 }
 
-body {
+.destination-body {
     background-color: #57c8ef;
     /*            z-index: 0;*/
+}
+
+.whole {
+    margin-top: 10vh;
 }
 
 
