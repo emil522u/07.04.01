@@ -179,7 +179,7 @@ footer {
     margin-right: 300px;
 }
 
-.sectionwrapper-omos {
+.sectionwrapper_omos {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-gap: 8vw;
@@ -199,6 +199,7 @@ footer {
     width: 100%;
 }
 
+
 /* DESTINATION*/
 article img {
     width: 100%;
@@ -214,6 +215,18 @@ article {
 
 }
 
+.logo img {
+    width: 10vw;
+    height: 10vh;
+}
+
+#container img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+
+}
+
 #container {
     width: 90vw;
     max-width: 1000px;
@@ -223,10 +236,33 @@ article {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 
+header {
+    display: flex;
+    justify-content: center;
+}
 
 .valgt {
     color: white;
     background-color: lightblue;
+
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    margin: 6rem auto;
+    margin-bottom: 2rem;
+
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
 
 }
 
@@ -255,7 +291,12 @@ article {
 #popup article {
     width: 80vw;
     height: 80vh;
+
+    margin: 6rem auto;
+
     margin: 4rem auto;
+    margin: 4rem auto;
+
     background-color: #8ECBEB;
 }
 
@@ -278,6 +319,9 @@ article {
 .filtre {
     width: 100vw;
     max-width: 1000px;
+    margin: 3rem auto;
+    margin-top: 1rem;
+    margin: 0 auto;
     margin: 0 auto;
     display: grid;
     grid-gap: 10px;
@@ -290,6 +334,13 @@ article {
     max-width: 50%;
     max-height: 50%;
 }
+
+body {
+    background-color: #57c8ef;
+    /*            z-index: 0;*/
+}
+
+
 
 
 /* MEDIA Q */
@@ -328,6 +379,14 @@ article {
 
     .column {
         padding: 40px;
+    }
+
+    .sectionwrapper_omos {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-gap: 8vw;
+        max-width: 1000px;
+        margin: 0 auto;
     }
 }
 
@@ -386,8 +445,29 @@ article {
 }
 
 @media screen and (max-width: 535px) {
+    .sectionwrapper_omos {
+        display: flex;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+    }
+
+    .sectionwrapper_omos .column2 {
+        flex-basis: 100%;
+        flex-shrink: 0;
+        scroll-snap-align: center;
+    }
+
     .column2 img {
-        width: 40%;
+        width: 100%;
         text-align: center;
+        padding: 0 4vw;
+    }
+
+    .column2 p {
+        padding: 4vw;
+    }
+
+    .column2 h2 {
+        padding-left: 4vw;
     }
 }
