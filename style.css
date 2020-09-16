@@ -194,6 +194,7 @@ footer {
     width: 100%;
 }
 
+
 /* DESTINATION*/
 article img {
     width: 100%;
@@ -209,6 +210,18 @@ article {
 
 }
 
+.logo img {
+    width: 10vw;
+    height: 10vh;
+}
+
+#container img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+
+}
+
 #container {
     width: 90vw;
     max-width: 1000px;
@@ -218,10 +231,33 @@ article {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 
+header {
+    display: flex;
+    justify-content: center;
+}
 
 .valgt {
     color: white;
     background-color: lightblue;
+
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    margin: 6rem auto;
+    margin-bottom: 2rem;
+
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
 
 }
 
@@ -250,7 +286,12 @@ article {
 #popup article {
     width: 80vw;
     height: 80vh;
+
+    margin: 6rem auto;
+
     margin: 4rem auto;
+    margin: 4rem auto;
+
     background-color: #8ECBEB;
 }
 
@@ -273,6 +314,9 @@ article {
 .filtre {
     width: 100vw;
     max-width: 1000px;
+    margin: 3rem auto;
+    margin-top: 1rem;
+    margin: 0 auto;
     margin: 0 auto;
     display: grid;
     grid-gap: 10px;
@@ -285,6 +329,13 @@ article {
     max-width: 50%;
     max-height: 50%;
 }
+
+body {
+    background-color: #57c8ef;
+    /*            z-index: 0;*/
+}
+
+
 
 
 /* MEDIA Q */
