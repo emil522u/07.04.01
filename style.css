@@ -449,7 +449,8 @@ article img {
         overflow-x: hidden;
     }
 
-    #omos h1 {
+    #omos h1,
+    .destination-titel {
         margin-left: 100px;
         margin-right: 100px;
     }
