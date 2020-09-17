@@ -548,6 +548,7 @@ article img {
         text-align: center;
         border: 2.5px solid white;
         padding-bottom: 8px;
+        text-transform: uppercase;
     }
 
 }
