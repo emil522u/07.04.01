@@ -52,7 +52,7 @@ async function hentData() {
 }
 
 function vis(destinationer) {
-    //løb igennem array "destinationer"
+    //Løber igennem array "destinationer" fra JSON
     container.innerHTML = "";
     destinationer.feed.entry.forEach(dest => {
         if (filter == "alle" || filter == dest.gsx$kategori.$t.toLowerCase()) {
