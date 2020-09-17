@@ -47,6 +47,7 @@ nav {
 .logo img {
     width: 10vw;
     height: 10vh;
+    margin-left: 15px;
 }
 
 .nav-links {
@@ -88,7 +89,7 @@ nav {
     width: 25px;
     height: 3px;
     background-color: #c7c7c7;
-    margin: 5px;
+    margin: 5px 15px;
 
     transition: all 0.3s ease;
 }
