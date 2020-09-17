@@ -58,10 +58,10 @@ function vis(destinationer) {
             const klon = temp.cloneNode(true).content;
             klon.querySelector(".navn").textContent = dest.gsx$navn.$t;
             klon.querySelector("img").src = "billeder/" + dest.gsx$billede.$t + ".jpg";
-            klon.querySelector(".indbyggertal").textContent = dest.gsx$indbyggertal.$t;
-            klon.querySelector(".vejr").textContent = dest.gsx$vejr.$t;
-            klon.querySelector(".funfact").textContent = dest.gsx$funfact.$t;
-            klon.querySelector(".pris").textContent = dest.gsx$pris.$t;
+            klon.querySelector(".indbyggertal").textContent += dest.gsx$indbyggertal.$t;
+            klon.querySelector(".vejr").textContent += dest.gsx$vejr.$t;
+            klon.querySelector(".funfact").textContent += dest.gsx$funfact.$t;
+            klon.querySelector(".pris").textContent += dest.gsx$pris.$t;
 
             klon.querySelector("article").addEventListener("click", () => visDetaljer(dest));
 
