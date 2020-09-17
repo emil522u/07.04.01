@@ -61,7 +61,7 @@ function vis(destinationer) {
             klon.querySelector(".indbyggertal").textContent = dest.gsx$indbyggertal.$t;
             klon.querySelector(".vejr").textContent = dest.gsx$vejr.$t;
             klon.querySelector(".funfact").textContent = dest.gsx$funfact.$t;
-            klon.querySelector(".pris").textContent = "Pris: " + dest.gsx$pris.$t + ",-";
+            klon.querySelector(".pris").textContent = dest.gsx$pris.$t;
 
             klon.querySelector("article").addEventListener("click", () => visDetaljer(dest));
 
