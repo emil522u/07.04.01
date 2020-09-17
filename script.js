@@ -32,13 +32,14 @@ const navSlide = () => {
 
 // FILTER
 
-
 let filter = "alle";
 let destinationer;
 let container = document.querySelector("#container");
 let temp = document.querySelector("template");
 
-const link = "https://spreadsheets.google.com/feeds/list/1KumHIMr-aP9Ey9WOiRaoOIaJnTZE0NDR1AoZhw2W5W8/od6/public/values?alt=json";
+const link = "https://spreadsheets.google.com/feeds/list/1KumHIMr-aP9Ey9WOiRaoOIaJnTZE0NDR1AoZhw2W5W8/od6/public/values?alt=json"
+
+document.addEventListener("DOMContentLoaded", hentData);
 
 
 async function hentData() {
@@ -50,9 +51,7 @@ async function hentData() {
 
 function vis(destinationer) {
     //løb igennem array "destinationer"
-
     container.innerHTML = "";
-
     destinationer.feed.entry.forEach(dest => {
         if (filter == "alle" || filter == dest.gsx$kategori.$t.toLowerCase()) {
             console.log(dest);
@@ -83,8 +82,6 @@ function visDetaljer(dest) {
 document.querySelector("#luk").addEventListener("click", () => popup.style.display = "none");
 
 
-//document.querySelector("#luk").addEventListener("click", () => popup.style.display = "none");
-
 function addEventListenersToButtons() {
     document.querySelectorAll(".filter").forEach((btn) => {
         btn.addEventListener("click", filterBTNs);
@@ -95,10 +92,7 @@ function filterBTNs() {
     filter = this.dataset.køn;
     document.querySelector("h1").textContent = this.textContent;
     document.querySelectorAll(".filter").forEach((btn) => {
-
-
         btn.classList.remove("valgt");
-
     });
 
     this.classList.add("valgt");
