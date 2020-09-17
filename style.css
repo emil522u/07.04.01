@@ -163,7 +163,7 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     background-color: rgba(255, 255, 255, 0.8);
     color: #195b80;
     font-size: 16px;
@@ -310,7 +310,7 @@ article img {
 
 #luk {
     position: fixed;
-    top 0;
+    top: 0;
     right: 8em;
     color: #e68609;
     padding: .1em;
