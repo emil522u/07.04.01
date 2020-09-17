@@ -75,9 +75,8 @@ nav {
     padding-right: 2em;
 }
 
-.nav-links a:active {
+.nav-links a:hover {
     color: #e68609;
-    text-decoration: line-through;
 }
 
 /* BURGER MENU */
@@ -279,37 +278,38 @@ article img {
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, .8);
-    display: none;
+    display: block;
 
 }
 
 #popup article {
     width: 80vw;
     height: 80vh;
-
-    margin: 6rem auto;
-
     margin: 4rem auto;
     margin: 4rem auto;
 
     background-color: #8ECBEB;
+    overflow: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#popup section {
+    flex-grow: 1;
+    flex-basis: 200px;
 }
 
 #luk {
     position: fixed;
     top 0;
     right: 8em;
-    background-color: white;
     color: black;
-    border-radius: 5px;
     padding: .1em;
     cursor: pointer;
+    font-family: 'Roboto', sans-serif;
 }
 
-.oprindelse {
-    font-style: oblique;
-    color: darkblue;
-}
 
 .filtre {
     width: 100vw;
