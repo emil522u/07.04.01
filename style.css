@@ -24,7 +24,8 @@ h3 {
 
 p {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1em;
+    font-size: .8em;
+
 }
 
 /* NAVIGATION*/
@@ -75,9 +76,8 @@ nav {
     padding-right: 2em;
 }
 
-.nav-links a:active {
+.nav-links a:hover {
     color: #e68609;
-    text-decoration: line-through;
 }
 
 /* BURGER MENU */
@@ -101,6 +101,7 @@ footer {
 }
 
 .footer-p {
+    padding: 5px;
     text-align: center;
     color: #f0f0f0;
 }
@@ -141,6 +142,11 @@ footer {
     background-color: #57c8ef;
 }
 
+.column p {
+    margin: 10px 10em 10px 10em;
+
+}
+
 /* TRENDING */
 #trending {
     margin-top: 30px;
@@ -177,7 +183,7 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     background-color: rgba(255, 255, 255, 0.8);
     color: #195b80;
     font-size: 16px;
@@ -201,10 +207,12 @@ footer {
 #omos h1 {
     padding-top: 10px;
     text-align: center;
-    color: #195b80;
+    color: white;
     border-bottom: 1px solid #1b709f;
     margin-left: 300px;
     margin-right: 300px;
+
+    font-size: 2em;
 }
 
 .sectionwrapper_omos {
@@ -236,12 +244,7 @@ article img {
     object-fit: cover;
 }
 
-#popup article {
-    border: 1px solid rgba(0, 0, 0, 0.25);
-    padding: 10px;
-    box-shadow: 1px 0px 5px 5px grey;
 
-}
 
 .destination-template article {
     background-color: white;
@@ -278,6 +281,8 @@ article img {
     margin-right: 300px;
     padding-top: 20px;
     margin-bottom: 20px;
+
+    font-size: 2em;
 }
 
 .pris {
@@ -299,36 +304,43 @@ article img {
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, .8);
-    display: none;
+    display: block;
 
 }
 
 #popup article {
     width: 80vw;
     height: 80vh;
-
-    margin: 6rem auto;
-
     margin: 4rem auto;
-    margin: 4rem auto;
+    border-radius: 5px;
 
-    background-color: #8ECBEB;
+    background-color: #f0f0f0;
+    overflow: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#popup section {
+    flex-grow: 1;
+    flex-basis: 300px;
+
+    margin: 30px;
 }
 
 #luk {
     position: fixed;
-    top 0;
+    top: 0;
     right: 8em;
-    background-color: white;
-    color: black;
-    border-radius: 5px;
+    color: #e68609;
     padding: .1em;
     cursor: pointer;
+    font-family: 'Roboto Mono', sans-serif;
+
 }
 
-.oprindelse {
-    font-style: oblique;
-    color: darkblue;
+#popup h2 {
+    color: #195b80
 }
 
 .filtre {
@@ -350,6 +362,8 @@ article img {
     border: none;
     cursor: pointer;
     border-radius: 5px;
+
+    font-family: 'Roboto Mono', monospace;
 }
 
 .valgt {
@@ -359,8 +373,8 @@ article img {
 }
 
 #popup img {
-    max-width: 50%;
-    max-height: 50%;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .destination-body {
@@ -374,8 +388,10 @@ article img {
 
 .kort-info p {
     font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: .6em;
 }
-
 
 /* MEDIA Q */
 
@@ -461,6 +477,11 @@ article img {
     body {
         overflow-x: hidden;
     }
+
+    .column p {
+        margin: 10px 5em 10px 5em;
+
+    }
 }
 
 @media screen and (max-width: 1050px) {
@@ -509,4 +530,15 @@ article img {
     .column2 h3 {
         padding-left: 4vw;
     }
+
+    .column p {
+        margin: 10px 2em 10px 2em;
+
+    }
+
+    #luk {
+        right: 3em;
+
+    }
+
 }

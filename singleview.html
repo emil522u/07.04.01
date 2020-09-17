@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Mono:wght@600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section id="popup">
+        <article>
+            <div id="luk">X</div>
+            <section>
+                <h2></h2>
+                <p><span class="beskrivelse"></span></p>
+            </section>
+            <section>
+                <img src="" alt="">
+                <div class="kort-info">
+                    <ul>
+                        <li>
+                            <p class="indbyggertal">Indbyggertal: </p>
+                        </li>
+                        <li>
+                            <p class="vejr">Vejr: </p>
+                        </li>
+                        <li>
+                            <p class="funfact">Fun fact: </p>
+                        </li>
+                        <li>
+                            <p class="pris">Prisleje: </p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+        </article>
+    </section>
+
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get("id");
+
+        const link = "https://spreadsheets.google.com/feeds/list/1KumHIMr-aP9Ey9WOiRaoOIaJnTZE0NDR1AoZhw2W5W8/od6/public/values?alt=json"
+
+        document.addEventListener("DOMContentLoaded", hentData);
+
+        async function hentData() {
+            const respons = await fetch(link);
+            destinationer = await respons.json();
+            vis(destinationer);
+        }
+
+        function vis(destinationer) {
+            //løb igennem array "destinationer"
+            destinationer.feed.entry.forEach(dest => {
+                if (id == dest.gsx$id.$t.toLowerCase()) {
+                    console.log(dest);
+                    document.querySelector("h2").textContent = dest.gsx$navn.$t;
+                    document.querySelector("img").src = "img/billeder/" + dest.gsx$billede.$t + ".jpg";
+                    document.querySelector(".beskrivelse").innerHTML += dest.gsx$lang.$t;
+
+
+                    document.querySelector(".indbyggertal").textContent += dest.gsx$indbyggertal.$t;
+                    document.querySelector(".vejr").textContent += dest.gsx$vejr.$t;
+                    document.querySelector(".funfact").textContent += dest.gsx$funfact.$t;
+                    document.querySelector(".pris").textContent += dest.gsx$pris.$t;
+                }
+
+            })
+
+        }
+
+        document.querySelector("#luk").addEventListener("click", () => history.back());
+
+    </script>
+</body>
+
+</html>
