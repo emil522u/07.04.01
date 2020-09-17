@@ -122,6 +122,7 @@ footer {
     top: 82%;
     right: 15%;
     color: white;
+    text-transform: uppercase;
 }
 
 #splash .arrow {
