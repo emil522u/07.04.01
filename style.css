@@ -107,11 +107,31 @@ footer {
 
 /* SPLASH */
 #splash {
-    background-image: url(splash/splash1.jpg);
+    background-image: url(splash/splash_uden_tekst.svg);
     max-width: none;
-    height: 60vh;
+    height: 100vh;
     background-size: cover;
-    background-position: 100% 50%;
+    background-position: 30% 30%;
+}
+
+#splash h1 {
+    z-index: 1;
+    position: absolute;
+    font-size: 3em;
+    top: 82%;
+    right: 15%;
+    color: white;
+}
+
+#splash .arrow {
+    background-image: url(billeder/arrow.svg);
+    z-index: 1;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    width: 1vw;
+    height: 1.52vw;
+
 }
 
 /* FAQ */
