@@ -189,7 +189,7 @@ footer {
 .sectionwrapper_omos {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 8vw;
+    grid-gap: 1vw;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -248,15 +248,9 @@ article img {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 
-.valgt {
-    color: white;
-    background-color: lightblue;
-
-}
-
 .destination-titel {
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Mono', monospace;
     color: white;
     border-bottom: 1px solid #1b709f;
     margin-left: 300px;
@@ -270,13 +264,6 @@ article img {
     color: darkblue;
 
 }
-
-/*
-.filter {
-    margin: 5px;
-        margin-bottom: 20px;
-}
-*/
 
 #grid-article {
     background-color: white;
@@ -344,9 +331,10 @@ article img {
     border-radius: 5px;
 }
 
-.filtre button:active {
+.valgt {
     color: #e68609;
     text-decoration: line-through;
+
 }
 
 #popup img {
@@ -407,7 +395,7 @@ article img {
     .sectionwrapper_omos {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        grid-gap: 8vw;
+        grid-gap: 1vw;
         max-width: 1000px;
         margin: 0 auto;
     }
