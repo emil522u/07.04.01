@@ -402,6 +402,8 @@ article img {
 }
 
 .kort-info2 p {
+    margin-top: 10px;
+    margin-bottom: 10px;
     font-size: .8em;
 }
 
