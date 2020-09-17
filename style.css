@@ -352,7 +352,9 @@ article img {
     margin-top: 10vh;
 }
 
-
+.kort-info p {
+    font-weight: bold;
+}
 
 
 /* MEDIA Q */
