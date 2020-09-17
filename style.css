@@ -30,7 +30,7 @@ p {
 /* NAVIGATION*/
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     min-height: 8vh;
     background-color: #1b709f;
