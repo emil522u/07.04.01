@@ -337,8 +337,8 @@ article img {
 
 #luk {
     position: fixed;
-    top: 0;
-    right: 8em;
+    top: 4rem;
+    right: 8rem;
     color: #e68609;
     padding: .1em;
     cursor: pointer;
@@ -488,6 +488,10 @@ article img {
     .column p {
         margin: 10px 15em 10px 15em;
 
+    }
+
+    #luk {
+        right: 6rem;
     }
 }
 
